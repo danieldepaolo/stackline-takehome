@@ -1,7 +1,7 @@
 import DataTable, { TableColumn } from "react-data-table-component"
 import { SalesData } from "../types"
 import { FC } from "react"
-import { darkGrey } from "../constants"
+import { darkGrey, faintGrey } from "../constants"
 
 interface ProductTableProps {
   tableData: SalesData[]
@@ -9,24 +9,29 @@ interface ProductTableProps {
 
 const columns: TableColumn<SalesData>[] = [
   {
-    name: 'Week Ending',
-    selector: row => row.weekEnding
+    name: 'WEEK ENDING',
+    selector: row => row.weekEnding,
+    sortable: true
   },
   {
-    name: 'Retail Sales',
-    selector: row => row.retailSales
+    name: 'RETAIL SALES',
+    selector: row => row.retailSales,
+    sortable: true
   },
   {
-    name: 'Wholesale Sales',
-    selector: row => row.wholesaleSales
+    name: 'WHOLESALE SALES',
+    selector: row => row.wholesaleSales,
+    sortable: true
   },
   {
-    name: 'Units Sold',
-    selector: row => row.unitsSold
+    name: 'UNITS SOLD',
+    selector: row => row.unitsSold,
+    sortable: true
   },
   {
-    name: 'Retailer Margin',
-    selector: row => row.retailerMargin
+    name: 'RETAILER MARGIN',
+    selector: row => row.retailerMargin,
+    sortable: true
   }
 ]
 
@@ -34,6 +39,25 @@ const customStyles = {
   cells: {
     style: {
       color: darkGrey
+    }
+  },
+  headCells: {
+    style: {
+      color: 'rgba(0, 0, 0, 0.7)'
+    }
+  },
+  headRow: {
+    style: {
+      padding: '6px 12px',
+      borderBottomColor: faintGrey
+    }
+  },
+  rows: {
+    style: {
+      padding: '0 12px',
+      '&:not(:last-of-type)': {
+				borderBottomColor: faintGrey,
+			},
     }
   }
 }

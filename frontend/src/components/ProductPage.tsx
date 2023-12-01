@@ -17,6 +17,7 @@ const LayoutWrapper = styled.div`
   flex-wrap: wrap;
   gap: 1em;
   margin: 1em;
+  min-height: 85vh;
 `
 
 const Sidebar = styled.div`
@@ -29,7 +30,7 @@ const WidgetsArea = styled.div`
   display: flex;
   flex: 1 1 70%;
   flex-direction: column;
-  gap: 1em;
+  gap: 3em;
   width: 100%;
 `
 
@@ -68,7 +69,7 @@ const ProductPage: FC<MainViewProps> = () => {
           <h3 className="title">Sales</h3>
           {loaded ? <Chart data={currentProduct.sales} /> : <Bars width={200} />}
         </CardWrapper>
-        <CardWrapper $withPadding>
+        <CardWrapper>
           {loaded ? <ProductTable tableData={currentProduct.sales} /> : <Bars width={200} />}
         </CardWrapper>
       </WidgetsArea>

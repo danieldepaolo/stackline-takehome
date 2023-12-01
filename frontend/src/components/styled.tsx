@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { faintGrey } from "../constants";
 
 export const CardWrapper = styled.div<{ $withPadding?: boolean; }>`
   background-color: white;
@@ -13,5 +14,5 @@ export const CardWrapper = styled.div<{ $withPadding?: boolean; }>`
 
 export const DividerLine = styled.div`
   width: 100%;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid ${faintGrey};
 `

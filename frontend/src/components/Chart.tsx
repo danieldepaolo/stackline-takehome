@@ -87,7 +87,6 @@ const Chart: FC<ChartProps> = ({ data }) => {
         <Tooltip labelFormatter={label => data[label]?.weekEnding || label} />
         <Line type="monotone" dataKey="retailSales" stroke="#45A7F6" strokeWidth={3} />
         <Line type="monotone" dataKey="wholesaleSales" stroke="#9AA5BE" strokeWidth={3} />
-        <Legend verticalAlign="top" height={36} />
       </LineChart>
     </ResponsiveContainer>
   )
