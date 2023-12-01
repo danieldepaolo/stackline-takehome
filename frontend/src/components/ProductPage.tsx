@@ -10,30 +10,19 @@ import { RootState } from "../store"
 import { setProducts } from "../features/product/productSlice"
 import Chart from "./Chart"
 import ProductTable from "./ProductTable"
+import { CardWrapper } from "./styled"
 
-const CardWrapper = styled.div<{ $withPadding?: boolean; }>`
-  background-color: white;
-  padding: ${props => props.$withPadding ? '1em' : 0};
-
-  .title {
-    font-weight: 400;
-    letter-spacing: 0.15px;
-    margin: 0.5em 0;
-  }
-`
-
-const LayoutWrapper = styled.section`
+const LayoutWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
-  height: 100vh;
   margin: 1em;
 `
 
 const Sidebar = styled.div`
   background-color: white;
-  flex: 1 1 300px;
-  height: 100%;
+  flex: 1 1 250px;
+  height: auto;
 `
 
 const WidgetsArea = styled.div`
@@ -41,6 +30,7 @@ const WidgetsArea = styled.div`
   flex: 1 1 70%;
   flex-direction: column;
   gap: 1em;
+  width: 100%;
 `
 
 interface MainViewProps {
