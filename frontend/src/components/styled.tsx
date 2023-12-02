@@ -4,6 +4,7 @@ import { faintGrey } from "../constants";
 export const CardWrapper = styled.div<{ $withPadding?: boolean; }>`
   background-color: white;
   padding: ${props => props.$withPadding ? '1em' : 0};
+  min-height: 250px;
 
   .title {
     font-weight: 400;

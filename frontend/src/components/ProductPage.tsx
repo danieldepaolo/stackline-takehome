@@ -22,6 +22,7 @@ const LayoutWrapper = styled.div`
 
 const Sidebar = styled.div`
   background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 12px;
   flex: 1 1 250px;
   height: auto;
 `
