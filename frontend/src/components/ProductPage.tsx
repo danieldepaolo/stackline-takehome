@@ -1,16 +1,16 @@
-import { FC, ReactNode, useEffect } from "react"
+import { FC, ReactNode, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import styled from "styled-components"
-import { Bars } from "react-loader-spinner"
+import styled from 'styled-components'
+import { Bars } from 'react-loader-spinner'
 
-import { Product } from "../types"
-import productResponse from "../../../data/stackline_frontend_assessment_data_2021.json"
-import ProductMeta from "./ProductMeta"
-import { RootState } from "../store"
-import { setProducts } from "../features/product/productSlice"
-import Chart from "./Chart"
-import ProductTable from "./ProductTable"
-import { CardWrapper } from "./styled"
+import { Product } from '../types'
+import productResponse from '../../../data/stackline_frontend_assessment_data_2021.json'
+import ProductMeta from './ProductMeta'
+import { RootState } from '../store'
+import { setProducts } from '../features/product/productSlice'
+import Chart from './Chart'
+import ProductTable from './ProductTable'
+import { CardWrapper } from './styled'
 
 const LayoutWrapper = styled.div`
   display: flex;
@@ -68,10 +68,18 @@ const ProductPage: FC<MainViewProps> = () => {
       <WidgetsArea>
         <CardWrapper $withPadding>
           <h3 className="title">Sales</h3>
-          {loaded ? <Chart data={currentProduct.sales} /> : <Bars width={200} />}
+          {loaded ? (
+            <Chart data={currentProduct.sales} />
+          ) : (
+            <Bars width={200} />
+          )}
         </CardWrapper>
         <CardWrapper>
-          {loaded ? <ProductTable tableData={currentProduct.sales} /> : <Bars width={200} />}
+          {loaded ? (
+            <ProductTable tableData={currentProduct.sales} />
+          ) : (
+            <Bars width={200} />
+          )}
         </CardWrapper>
       </WidgetsArea>
     </LayoutWrapper>

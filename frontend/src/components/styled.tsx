@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import { faintGrey } from "../constants";
+import styled from 'styled-components'
+import { faintGrey } from '../constants'
 
-export const CardWrapper = styled.div<{ $withPadding?: boolean; }>`
+export const CardWrapper = styled.div<{ $withPadding?: boolean }>`
   background-color: white;
-  padding: ${props => props.$withPadding ? '1em' : 0};
+  padding: ${props => (props.$withPadding ? '1em' : 0)};
   min-height: 250px;
 
   .title {

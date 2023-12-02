@@ -1,6 +1,6 @@
-import { FC } from "react"
-import styled from "styled-components";
-import { darkGrey } from "../constants";
+import { FC } from 'react'
+import styled from 'styled-components'
+import { darkGrey } from '../constants'
 
 const TagWrapper = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -12,15 +12,11 @@ const TagWrapper = styled.div`
 `
 
 interface TagProps {
-  label: string;
+  label: string
 }
 
 const Tag: FC<TagProps> = ({ label }) => {
-  return (
-    <TagWrapper>
-      {label}
-    </TagWrapper>
-  )
+  return <TagWrapper>{label}</TagWrapper>
 }
 
 export default Tag

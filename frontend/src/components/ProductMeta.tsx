@@ -1,9 +1,9 @@
-import { FC } from "react"
-import styled from "styled-components"
-import { Product } from "../types";
-import Tag from "./Tag";
-import { lightGrey } from "../constants";
-import { DividerLine } from "./styled";
+import { FC } from 'react'
+import styled from 'styled-components'
+import { Product } from '../types'
+import Tag from './Tag'
+import { lightGrey } from '../constants'
+import { DividerLine } from './styled'
 
 const ProductWrapper = styled.div`
   text-align: center;
@@ -32,10 +32,8 @@ const TagsWrapper = styled.div`
   padding: 12px 16px;
 `
 
-
-
 interface ProductMetaProps {
-  product: Product;
+  product: Product
 }
 
 const ProductMeta: FC<ProductMetaProps> = ({ product }) => {
@@ -48,7 +46,9 @@ const ProductMeta: FC<ProductMetaProps> = ({ product }) => {
       </TitleArea>
       <DividerLine />
       <TagsWrapper>
-        {product.tags.map((tag, i) => <Tag key={`${tag}-${i}`} label={tag} />)}
+        {product.tags.map((tag, i) => (
+          <Tag key={`${tag}-${i}`} label={tag} />
+        ))}
       </TagsWrapper>
       <DividerLine />
     </ProductWrapper>

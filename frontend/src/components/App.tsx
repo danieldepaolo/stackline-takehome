@@ -16,7 +16,7 @@ const HeaderBar = styled.div`
 `
 
 const AppWrapper = styled.div`
-  background-color: #F6F8FA;
+  background-color: #f6f8fa;
 `
 
 function App() {
