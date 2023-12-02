@@ -1,16 +1,16 @@
-import { FC, ReactNode, useEffect } from 'react'
+import { FC, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import styled from 'styled-components'
 import { Bars } from 'react-loader-spinner'
 
-import { Product } from '../types'
-import productResponse from '../../../data/stackline_frontend_assessment_data_2021.json'
 import ProductMeta from './ProductMeta'
-import { RootState } from '../store'
-import { setProducts } from '../features/product/productSlice'
 import Chart from './Chart'
 import ProductTable from './ProductTable'
 import { CardWrapper } from './styled'
+import { Product } from '../types'
+import { RootState } from '../store'
+import { setProducts } from '../features/product/productSlice'
+import productResponse from '../test/data/stackline_frontend_assessment_data_2021.json'
 
 const LayoutWrapper = styled.div`
   display: flex;
@@ -35,11 +35,7 @@ const WidgetsArea = styled.div`
   width: 100%;
 `
 
-interface MainViewProps {
-  cardComponents?: ReactNode[]
-}
-
-const ProductPage: FC<MainViewProps> = () => {
+const ProductPage: FC = () => {
   const products = useSelector((state: RootState) => state.products.items)
   const loaded: boolean = !!products?.length
   const dispatch = useDispatch()

@@ -1,18 +1,8 @@
 import { FC, useMemo } from 'react'
-import { SalesData } from '../types'
-import {
-  Legend,
-  Line,
-  LineChart,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-} from 'recharts'
-import { lightGrey } from '../constants'
+import { Line, LineChart, ResponsiveContainer, Tooltip, XAxis } from 'recharts'
 
-interface ChartProps {
-  data: SalesData[]
-}
+import { SalesData } from '../types'
+import { lightGrey } from '../constants'
 
 interface MonthData {
   name: string
@@ -34,6 +24,10 @@ const months = [
   'November',
   'December',
 ]
+
+interface ChartProps {
+  data: SalesData[]
+}
 
 const Chart: FC<ChartProps> = ({ data }) => {
   const chartData = useMemo(() => {
@@ -59,8 +53,6 @@ const Chart: FC<ChartProps> = ({ data }) => {
       currentMonth.wholesaleSales += week.wholesaleSales
     })
     bucketedData.push({ ...currentMonth })
-
-    console.log(bucketedData)
     return bucketedData
   }, [data])
 

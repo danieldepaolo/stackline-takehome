@@ -1,11 +1,8 @@
-import DataTable, { TableColumn } from 'react-data-table-component'
-import { SalesData } from '../types'
 import { FC } from 'react'
-import { darkGrey, faintGrey } from '../constants'
+import DataTable, { TableColumn } from 'react-data-table-component'
 
-interface ProductTableProps {
-  tableData: SalesData[]
-}
+import { SalesData } from '../types'
+import { darkGrey, faintGrey } from '../constants'
 
 const columns: TableColumn<SalesData>[] = [
   {
@@ -60,6 +57,10 @@ const customStyles = {
       },
     },
   },
+}
+
+interface ProductTableProps {
+  tableData: SalesData[]
 }
 
 const ProductTable: FC<ProductTableProps> = ({ tableData }) => {

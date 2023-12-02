@@ -1,9 +1,10 @@
 import { FC } from 'react'
 import styled from 'styled-components'
-import { Product } from '../types'
+
 import Tag from './Tag'
-import { lightGrey } from '../constants'
 import { DividerLine } from './styled'
+import { Product } from '../types'
+import { lightGrey } from '../constants'
 
 const ProductWrapper = styled.div`
   text-align: center;
@@ -40,7 +41,7 @@ const ProductMeta: FC<ProductMetaProps> = ({ product }) => {
   return (
     <ProductWrapper>
       <TitleArea>
-        <img src={product.image} alt="Product Image" width={128} />
+        <img src={product.image} width={128} alt="Product Image" />
         <h3 className="title">{product.title}</h3>
         <span className="subtitle">{product.subtitle}</span>
       </TitleArea>

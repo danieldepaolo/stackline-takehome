@@ -1,13 +1,14 @@
 import stacklineLogo from '/stackline_logo.svg'
-import '../styles/App.css'
 import styled from 'styled-components'
-import { toolbarBgColor } from '../constants'
+
+import '../styles/App.css'
 import ProductPage from './ProductPage'
+import { toolbarBgColor } from '../constants'
 
 const HeaderBar = styled.div`
   background-color: ${toolbarBgColor};
-  padding: 16px;
   margin-bottom: 3em;
+  padding: 16px;
 
   .logo {
     height: 1.2em;
